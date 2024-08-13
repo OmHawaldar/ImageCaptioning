@@ -19,46 +19,55 @@ This project implements a Generative AI-powered application for image captioning
 ### Clone the Repository: 
     git clone https://github.com/OmHawaldar/ImageCaptioning
     cd image-captioning-blip
+### Create a Python virtual environment
+If you’re not already using a virtual environment, it’s a good idea to create one. This isolates your project dependencies and can prevent conflicts.
+
+    pip3 install virtualenv 
+    virtualenv my_env # create a virtual environment my_env
+    source my_env/bin/activate # activate my_env
 
 ### Install Dependencies
-    pip install -r requirements.txt
+    pip install langchain==0.1.11 gradio==4.21.0 transformers==4.38.2 bs4==0.0.2 requests==2.31.0 torch==2.2.1
+ 
+ 
+    pip install gradio transformers Pillow
 
-Download BLIP Model
+### To start the application:
+    python app.py
 
-BLIP is integrated directly via the Hugging Face Transformers library. The model will be automatically downloaded when first used.
-Usage
-Running the Application
+### Generating Captions
 
-To start the application:
+- Upload an image through the web interface.
+- The application will generate and display a caption for the uploaded image.
 
-bash
+## Example
+### This is the Interface created using gradio
 
-python app.py
+![Alt text](example.jpg)
 
-Generating Captions
+### In this section an random image is given as input
+![Alt text](example2.jpg)
 
-    Upload an image through the web interface.
-    The application will generate and display a caption for the uploaded image.
+### Here we can see the caption is generated as output for the given image
+![Alt text](example3.jpg)
 
-Example
 
-    Input: 
-    Generated Caption: "A cat sitting on a windowsill looking outside."
-
-Models and Training
+### Models and Training
 
 This project uses the BLIP model from Hugging Face, which is pre-trained on large datasets of image-caption pairs. For more advanced use cases, fine-tuning the BLIP model on custom datasets is possible.
 License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
-Acknowledgments
+### Acknowledgments
 
-    Hugging Face for the Transformers library and BLIP model.
-    The open-source community for providing valuable tools and resources.
+- Hugging Face for the Transformers library and BLIP model.
+- The open-source community for providing valuable tools and resources.
+- Gradio for providing user-friendly interface for AI models 
 
-Contributing
+### Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements, bug fixes, or new features.
 Contact
 
-For any inquiries or questions, please contact [your email address].
+For any inquiries or questions, please contact [hawaldarom39@gmail.com].
+
+For a detailed explaination of this application and it's use cases also contact [hawaldarom39@gmail.com].
